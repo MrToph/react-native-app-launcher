@@ -7,8 +7,9 @@
     include ':react-native-app-launcher'
     project(':react-native-app-launcher').projectDir = new File(settingsDir, '../node_modules/react-native-app-launcher/android')
     ```
+
 * Add the following to `android/app/build.gradle`:
-    ````xml
+    ```xml
     ...
 
     dependencies {
