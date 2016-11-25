@@ -50,7 +50,7 @@
         protected List<ReactPackage> getPackages() {
             return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
-                new LauncherPackage()     // // add this for react-native-app-launcher
+                new LauncherPackage()     // add this for react-native-app-launcher
             );
         }
     }
