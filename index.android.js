@@ -1,53 +1,11 @@
+'use strict';
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * This exposes the native ToastAndroid module as a JS module. This has a
+ * function 'show' which takes the following parameters:
+ *
+ * 1. String message: A string with the text to toast
+ * 2. int duration: The duration of the toast. May be ToastAndroid.SHORT or
+ *    ToastAndroid.LONG
  */
-
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
-
-export default class appLauncher extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('appLauncher', () => appLauncher);
+import { NativeModules } from 'react-native';
+module.exports = NativeModules.ToastAndroid;
