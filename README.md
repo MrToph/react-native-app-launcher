@@ -8,7 +8,7 @@
     project(':react-native-app-launcher').projectDir = new File(settingsDir, '../node_modules/react-native-app-launcher/android')
     ```
 * Add the following to `android/app/build.gradle`:
-    ````
+    ````xml
     ...
 
     dependencies {
@@ -17,7 +17,7 @@
     }
     ```
 * Add the following to `android/app/src/main/AndroidManifest.xml`:
-    ```
+    ```xml
     <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.reactnativeproject">
 
@@ -38,21 +38,19 @@
     </manifest>
     ```
 * Add the following to `android/app/src/main/java/**/MainApplication.java`:
-    ````
-package com.motivation;
+    ```java
+    package com.motivation;
 
-import io.cmichel.appLauncher.LauncherPackage;  // add this for react-native-app-launcher
+    import io.cmichel.appLauncher.LauncherPackage;  // add this for react-native-app-launcher
 
-public class MainApplication extends Application implements ReactApplication {
+    public class MainApplication extends Application implements ReactApplication {
 
-    @Override
-    protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-          new LauncherPackage()     // // add this for react-native-app-launcher
-      );
+        @Override
+        protected List<ReactPackage> getPackages() {
+            return Arrays.<ReactPackage>asList(
+                new MainReactPackage(),
+                new LauncherPackage()     // // add this for react-native-app-launcher
+            );
+        }
     }
-  };
-}
-
     ```
