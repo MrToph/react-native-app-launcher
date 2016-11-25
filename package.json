@@ -26,13 +26,4 @@
   "peerDependencies": {
     "react-native": ">=0.38.0"
   },
-  "jest": {
-    "preset": "react-native"
-  },
-  "devDependencies": {
-    "babel-jest": "17.0.2",
-    "babel-preset-react-native": "1.9.0",
-    "jest": "17.0.3",
-    "react-test-renderer": "15.4.1"
-  }
 }
