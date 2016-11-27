@@ -60,4 +60,4 @@
 ## Mofifying/Build the Project in Android Studio
 * Start `Android Studio` and select `File -> New -> Import Project` and select the `android` folder.
 * If you get a `Plugin with id 'android-library' not found` Error, install `android support repository`
-    through the SDK manager and edit the following code to `build.gradle`:
+    through the SDK manager.
