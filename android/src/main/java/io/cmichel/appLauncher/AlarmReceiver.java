@@ -4,7 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import android.widget.Toast;
 
 public class AlarmReceiver extends BroadcastReceiver {
     @Override
@@ -22,6 +21,5 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         context.startActivity(launchIntent);
         Log.i("ReactNativeAppLauncher", "AlarmReceiver: Launching: " + packageName);
-        Toast.makeText(context, "Timer went off!", Toast.LENGTH_LONG).show();
     }
 }
